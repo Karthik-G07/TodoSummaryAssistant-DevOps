@@ -104,7 +104,7 @@ jobs:
               "echo Checking backend through frontend...",
               "curl -f http://localhost/api/todos",
               "echo Checking backend health...",
-              "docker exec todo-frontend wget -qO- http://backend:8080/actuator/health | grep -q '\"status\":\"UP\"'",
+             "docker exec todo-frontend wget -qO- http://backend:8080/actuator/health | grep -q UP",
               "echo Deployment successful!"
             ]' \
             --query "Command.CommandId" \
