@@ -84,7 +84,7 @@ jobs:
             --comment "Deploy TodoSummaryAssistant ${GITHUB_SHA}" \
             --parameters 'commands=[
               "set -e",
-              "cd ~/TodoSummaryAssistant-DevOps",
+              "cd /home/ubuntu/TodoSummaryAssistant-DevOps",
               "echo Pulling exact Docker images...",
               "docker pull '"${{ secrets.DOCKERHUB_USERNAME }}"'/todo-backend:'"${GITHUB_SHA}"'",
               "docker pull '"${{ secrets.DOCKERHUB_USERNAME }}"'/todo-frontend:'"${GITHUB_SHA}"'",
